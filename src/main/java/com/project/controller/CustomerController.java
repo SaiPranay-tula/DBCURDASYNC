@@ -21,7 +21,7 @@ public class CustomerController {
     private CustomerService customerService;
 
 
-    @PostMapping ("/post/customer")
+    @PostMapping ("/add/customer")
     public CompletableFuture<ResponseEntity<Customer>> saveCustomer(@RequestBody Customer customer) {
         return customerService.saveCustomer(customer)
                 .thenApply(ResponseEntity::ok);
